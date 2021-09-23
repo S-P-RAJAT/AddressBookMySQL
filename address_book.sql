@@ -28,3 +28,5 @@ DESCRIBE address_book;
 UPDATE address_book SET name = "Book2", type = "Profession" WHERE city = "Mumbai";
 UPDATE address_book SET name = "Book1", type = "Friends" WHERE city = "Bangalore";
 SELECT * FROM address_book;
+
+SELECT COUNT(*),type FROM address_book GROUP BY (type);
