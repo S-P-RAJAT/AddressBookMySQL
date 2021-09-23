@@ -13,3 +13,5 @@ SELECT * FROM address_book;
 UPDATE address_book SET zip = 560213 WHERE first_name = "Pradeep" AND last_name = "Nayar";
 SELECT * FROM address_book;
 
+DELETE  FROM  address_book WHERE first_name = "Pradeep" AND last_name = "Nayar";
+SELECT * FROM address_book;
