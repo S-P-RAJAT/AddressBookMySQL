@@ -10,3 +10,6 @@ SELECT * FROM address_book;
 INSERT INTO address_book (first_name, last_name, address, city, state, zip, phone_number, email) VALUES ("Pradeep","Nayar","2nd Cross, Yelahanka","Bangalore","KARNATAKA",562130,8434227543,"pradeep@gmail.com"),("Anjali","Verma","5th Cross, Malleshwaram","Bangalore","Karnataka",730160,8937126754,"anjaliverma@gmail.com"),("Hemanth","Kumar","2nd Street, Andheri","Mumbai","Maharashtra",530160,8937856774,"hemanthk@gmail.com");
 SELECT * FROM address_book;
 
+UPDATE address_book SET zip = 560213 WHERE first_name = "Pradeep" AND last_name = "Nayar";
+SELECT * FROM address_book;
+

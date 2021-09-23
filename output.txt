@@ -54,3 +54,18 @@ mysql> SELECT * FROM address_book;
 +----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
 4 rows in set (0.00 sec)
 
+mysql>
+mysql> UPDATE address_book SET zip = 560213 WHERE first_name = "Pradeep" AND last_name = "Nayar";
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+| id | first_name | last_name | address                 | city      | state       | zip    | phone_number | email                 |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+|  1 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA   | 560100 | 8934267543   | raj@gmail.com         |
+|  2 | Pradeep    | Nayar     | 2nd Cross, Yelahanka    | Bangalore | KARNATAKA   | 560213 | 8434227543   | pradeep@gmail.com     |
+|  3 | Anjali     | Verma     | 5th Cross, Malleshwaram | Bangalore | Karnataka   | 730160 | 8937126754   | anjaliverma@gmail.com |
+|  4 | Hemanth    | Kumar     | 2nd Street, Andheri     | Mumbai    | Maharashtra | 530160 | 8937856774   | hemanthk@gmail.com    |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+4 rows in set (0.00 sec)
