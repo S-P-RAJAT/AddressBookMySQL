@@ -163,3 +163,16 @@ mysql> SELECT COUNT(*),type FROM address_book GROUP BY (type);
 |        1 | Profession |
 +----------+------------+
 2 rows in set (0.00 sec)
+mysql> INSERT INTO address_book (first_name, last_name, address, city, state, zip, phone_number, email,name,type) VALUES ("Rajat","S P","2nd Cross, HosaRoad", "Bangalore", "KARNATAKA", 560100, 8934267543, "raj@gmail.com", "Book1", "Family");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+| id | first_name | last_name | address                 | city      | state       | zip    | phone_number | email                 | name  | type       |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+|  1 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA   | 560100 | 8934267543   | raj@gmail.com         | Book1 | Friends    |
+|  3 | Anjali     | Verma     | 5th Cross, Malleshwaram | Bangalore | Karnataka   | 730160 | 8937126754   | anjaliverma@gmail.com | Book1 | Friends    |
+|  4 | Hemanth    | Kumar     | 2nd Street, Andheri     | Mumbai    | Maharashtra | 530160 | 8937856774   | hemanthk@gmail.com    | Book2 | Profession |
+|  5 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA   | 560100 | 8934267543   | raj@gmail.com         | Book1 | Family     |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+4 rows in set (0.00 sec)

@@ -30,3 +30,6 @@ UPDATE address_book SET name = "Book1", type = "Friends" WHERE city = "Bangalore
 SELECT * FROM address_book;
 
 SELECT COUNT(*),type FROM address_book GROUP BY (type);
+
+INSERT INTO address_book (first_name, last_name, address, city, state, zip, phone_number, email,name,type) VALUES ("Rajat","S P","2nd Cross, HosaRoad", "Bangalore", "KARNATAKA", 560100, 8934267543, "raj@gmail.com", "Book1", "Family");
+SELECT * FROM address_book;
