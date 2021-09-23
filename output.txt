@@ -100,3 +100,10 @@ mysql> SELECT first_name , last_name , city, state FROM address_book WHERE state
 +------------+-----------+-----------+-----------+
 2 rows in set (0.00 sec)
 
+mysql> SELECT COUNT(*) FROM address_book WHERE city = "Bangalore" and state = "Karnataka";
++----------+
+| COUNT(*) |
++----------+
+|        2 |
++----------+
+1 row in set (0.00 sec)
