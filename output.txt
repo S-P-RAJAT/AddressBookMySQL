@@ -28,3 +28,29 @@ mysql> DESCRIBE address_book;
 | email        | varchar(320) | YES  |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.01 sec)
+mysql> INSERT INTO address_book VALUE(1,"Rajat","S P","2nd Cross, HosaRoad","Bangalore","KARNATAKA",560100,8934267543,"raj@gmail.com");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+---------------------+-----------+-----------+--------+--------------+---------------+
+| id | first_name | last_name | address             | city      | state     | zip    | phone_number | email         |
++----+------------+-----------+---------------------+-----------+-----------+--------+--------------+---------------+
+|  1 | Rajat      | S P       | 2nd Cross, HosaRoad | Bangalore | KARNATAKA | 560100 | 8934267543   | raj@gmail.com |
++----+------------+-----------+---------------------+-----------+-----------+--------+--------------+---------------+
+1 row in set (0.01 sec)
+
+mysql> INSERT INTO address_book (first_name, last_name, address, city, state, zip, phone_number, email) VALUES ("Pradeep","Nayar","2nd Cross, Yelahanka","Bangalore","KARNATAKA",562130,8434227543,"pradeep@gmail.com"),("Anjali","Verma","5th Cross, Malleshwaram","Bangalore","Karnataka",730160,8937126754,"anjaliverma@gmail.com"),("Hemanth","Kumar","2nd Street, Andheri","Mumbai","Maharashtra",530160,8937856774,"hemanthk@gmail.com");
+Query OK, 3 rows affected (0.00 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+| id | first_name | last_name | address                 | city      | state       | zip    | phone_number | email                 |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+|  1 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA   | 560100 | 8934267543   | raj@gmail.com         |
+|  2 | Pradeep    | Nayar     | 2nd Cross, Yelahanka    | Bangalore | KARNATAKA   | 562130 | 8434227543   | pradeep@gmail.com     |
+|  3 | Anjali     | Verma     | 5th Cross, Malleshwaram | Bangalore | Karnataka   | 730160 | 8937126754   | anjaliverma@gmail.com |
+|  4 | Hemanth    | Kumar     | 2nd Street, Andheri     | Mumbai    | Maharashtra | 530160 | 8937856774   | hemanthk@gmail.com    |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+
+4 rows in set (0.00 sec)
+
