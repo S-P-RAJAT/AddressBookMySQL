@@ -22,3 +22,9 @@ SELECT first_name , last_name , city, state FROM address_book WHERE state = "Kar
 SELECT COUNT(*) FROM address_book WHERE city = "Bangalore" and state = "Karnataka";
 
 SELECT * FROM address_book WHERE city = "Bangalore" ORDER BY first_name, last_name;
+
+ALTER TABLE address_book ADD (name VARCHAR(30), type VARCHAR(20));
+DESCRIBE address_book;
+UPDATE address_book SET name = "Book2", type = "Profession" WHERE city = "Mumbai";
+UPDATE address_book SET name = "Book1", type = "Friends" WHERE city = "Bangalore";
+SELECT * FROM address_book;

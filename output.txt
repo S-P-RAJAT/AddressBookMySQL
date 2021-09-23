@@ -115,3 +115,43 @@ mysql> SELECT * FROM address_book WHERE city = "Bangalore" ORDER BY first_name, 
 |  1 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA | 560100 | 8934267543   | raj@gmail.com         |
 +----+------------+-----------+-------------------------+-----------+-----------+--------+--------------+-----------------------+
 2 rows in set (0.00 sec)
+
+mysql> ALTER TABLE address_book ADD (name VARCHAR(30), type VARCHAR(20));
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE address_book;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name   | varchar(50)  | NO   |     | NULL    |                |
+| last_name    | varchar(50)  | NO   |     | NULL    |                |
+| address      | varchar(200) | YES  |     | NULL    |                |
+| city         | varchar(30)  | YES  |     | NULL    |                |
+| state        | varchar(30)  | YES  |     | NULL    |                |
+| zip          | int unsigned | YES  |     | NULL    |                |
+| phone_number | mediumtext   | YES  |     | NULL    |                |
+| email        | varchar(320) | YES  |     | NULL    |                |
+| name         | varchar(30)  | YES  |     | NULL    |                |
+| type         | varchar(20)  | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+11 rows in set (0.00 sec)
+
+mysql> UPDATE address_book SET name = "Book2", type = "Profession" WHERE city = "Mumbai";
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE address_book SET name = "Book1", type = "Friends" WHERE city = "Bangalore";
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+mysql> SELECT * FROM address_book;
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+| id | first_name | last_name | address                 | city      | state       | zip    | phone_number | email                 | name  | type       |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+|  1 | Rajat      | S P       | 2nd Cross, HosaRoad     | Bangalore | KARNATAKA   | 560100 | 8934267543   | raj@gmail.com         | Book1 | Friends    |
+|  3 | Anjali     | Verma     | 5th Cross, Malleshwaram | Bangalore | Karnataka   | 730160 | 8937126754   | anjaliverma@gmail.com | Book1 | Friends    |
+|  4 | Hemanth    | Kumar     | 2nd Street, Andheri     | Mumbai    | Maharashtra | 530160 | 8937856774   | hemanthk@gmail.com    | Book2 | Profession |
++----+------------+-----------+-------------------------+-----------+-------------+--------+--------------+-----------------------+-------+------------+
+3 rows in set (0.00 sec)
