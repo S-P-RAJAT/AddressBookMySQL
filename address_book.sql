@@ -20,3 +20,5 @@ SELECT first_name , last_name , city FROM address_book WHERE CITY = "Bangalore";
 SELECT first_name , last_name , city, state FROM address_book WHERE state = "Karnataka";
 
 SELECT COUNT(*) FROM address_book WHERE city = "Bangalore" and state = "Karnataka";
+
+SELECT * FROM address_book WHERE city = "Bangalore" ORDER BY first_name, last_name;
