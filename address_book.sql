@@ -15,3 +15,6 @@ SELECT * FROM address_book;
 
 DELETE  FROM  address_book WHERE first_name = "Pradeep" AND last_name = "Nayar";
 SELECT * FROM address_book;
+
+SELECT first_name , last_name , city FROM address_book WHERE CITY = "Bangalore";
+SELECT first_name , last_name , city, state FROM address_book WHERE state = "Karnataka";
