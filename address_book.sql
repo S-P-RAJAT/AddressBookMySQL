@@ -56,9 +56,9 @@ first_name VARCHAR(50) NOT NULL,
 last_name VARCHAR(50) NOT NULL,
 phone_number BIGINT,
 email VARCHAR(320),
-address_book_id INT unsigned,
+book_id INT unsigned,
 PRIMARY KEY (contact_id),
-FOREIGN KEY (address_book_id) REFERENCES address_book(book_id) ON DELETE SET NULL ON UPDATE CASCADE);
+FOREIGN KEY (book_id) REFERENCES address_book(book_id) ON DELETE SET NULL ON UPDATE CASCADE);
 
 CREATE TABLE contact_type(
 contact_id INT unsigned NOT NULL,
@@ -86,7 +86,7 @@ SELECT * FROM type;
 
 SELECT * FROM type WHERE type_name = "Family";
 
-INSERT INTO  contact(first_name, last_name, phone_number, email, address_book_id) VALUES
+INSERT INTO  contact(first_name, last_name, phone_number, email, book_id) VALUES
 ("Rajat","S P",8934267543,"raj@gmail.com",1),
 ("Hemanth","Kumar",8937856774,"hemanthk@gmail.com",2),
 ("Anjali","Verma",8937126754,"anjaliverma@gmail.com",1);
